@@ -2,12 +2,15 @@
 
 /**
  *check_cycle - checks for a cycle in a linked list
- *@list : head of the linked list
- *Return - 1 if cycle present, 0 if cycle absent
+ *@list: head of the linked list
+ *return - 1 if cycle present, 0 if cycle absent
  */
 
 int check_cycle(listint_t *list)
 {
+	if (list == NULL)
+		return (0);
+
 	listint_t *first;
 	listint_t *other;
 
