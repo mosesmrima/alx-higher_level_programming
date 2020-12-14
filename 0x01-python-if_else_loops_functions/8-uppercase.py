@@ -5,6 +5,6 @@ def islower(c):
             m = ord(i)
             m = m - 32
             i = m
-            print(chr(i), end="")
+            print(chr(i).format(), end="")
         else:
-            print(i, end="")
+            print(i.format(), end="")
