@@ -7,4 +7,4 @@ def uppercase(str):
             i = m
             i = chr(i)
         print(i.format(), end="")
-    print("\n")
+    print('\n')
