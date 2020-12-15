@@ -6,20 +6,14 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-	if (*head == NULL)
-		return (NULL);
-
-	listint_t  *largest;
-	listint_t *tmp;
-	listint_t *prev;
-	listint_t  *node;
-
-	largest = *head;
-	tmp = *head;
-	prev = NULL;
-	node = malloc(sizeof (listint_t));
+	listint_t  *largest = *head;
+	listint_t *tmp = *head;
+	listint_t *prev = NULL;
+	listint_t  *node = malloc(sizeof (listint_t));
 
 	if (node == NULL)
+		return (NULL);
+	if (*head == NULL)
 		return (NULL);
 	node->n = number;
 
