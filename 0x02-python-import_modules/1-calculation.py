@@ -10,5 +10,5 @@ if __name__ == "__main__":
     quo = div(a, b)
     print("{} + {} = {}".format(a, b, sum))
     print("{} - {} = {}".format(a, b, dif))
-    print("{} * {} = {}".format(a, b, mul))
-    print("{} / {} = {}".format(a, b, div))
+    print("{} * {} = {}".format(a, b, prod))
+    print("{} / {} = {}".format(a, b, quo))
