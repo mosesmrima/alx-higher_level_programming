@@ -1,1 +1,2 @@
+/*show DBs*/
 SHOW DATABASES
