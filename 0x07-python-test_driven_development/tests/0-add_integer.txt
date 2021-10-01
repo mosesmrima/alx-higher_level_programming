@@ -1,0 +1,60 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer`` function
+------------------------------
+
+
+Integer params:
+	>>> add_integer = __import__("0-add_integer").add_integer
+	>>> add_integer(2, 3)
+	5
+
+Negative params:
+	 >>> add_integer(-2, -3)
+	 -5
+
+Floating point params:
+	 >>> add_integer(2.0, 3.0)
+	 5
+
+
+Default param:
+	>>> add_integer(2)
+	100
+
+Check casting:
+	>>> add_integer(1.9, 4.9)
+	5
+
+String param ``a``:
+       >>> add_integer("alx", 3)
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+String param ``b``
+       >>> add_integer(2, "alx")
+       Traceback (most recent call last):
+       TypeError: b must be an integer
+
+
+String params, ie both:
+       >>> add_integer("alx", "hbtn")
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+NaN param:
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+Infinity as a param:
+	 >>> add_integer(float("inf"))
+	 Traceback (most recent call last):
+	 OverflowError: cannot convert float infinity to integer
+
+
+Complex number:
+	>>> add_integer(3+2j)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
