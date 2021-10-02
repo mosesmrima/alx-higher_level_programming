@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """This module contains one function that divides elements of a matrix"""
 
