@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 
 """ this modulecontains one function to insert line to a file """
 
