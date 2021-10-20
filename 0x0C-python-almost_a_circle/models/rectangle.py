@@ -134,11 +134,11 @@ class Rectangle(Base):
                     self.y = v
 
     def to_dictionary(self):
-        """ return dictionary representation of object """
+        """return dictionary representation of object"""
         return {
             "id": self.id,
             "width": self.width,
             "height": self.height,
             "x": self.x,
-            "y": self.y
+            "y": self.y,
         }
