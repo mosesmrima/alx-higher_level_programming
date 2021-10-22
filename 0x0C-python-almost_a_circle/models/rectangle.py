@@ -100,11 +100,12 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h)
 
     def update(self, *args, **kwargs):
+        """ update properties with new values """
         if args and len(args) != 0:
             i = 0
             for arg in args:
                 if i == 0:
-                    if arg == None:
+                    if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
@@ -120,7 +121,7 @@ class Rectangle(Base):
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
-                    if v == None:
+                    if v is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = v
