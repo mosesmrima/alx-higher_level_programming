@@ -28,7 +28,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """overloads the str method"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}"
+    .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """update attributes with new values"""
@@ -36,7 +37,7 @@ class Square(Rectangle):
             i = 0
             for arg in args:
                 if i == 0:
-                    if arg == None:
+                    if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
@@ -50,7 +51,7 @@ class Square(Rectangle):
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
-                    if v == None:
+                    if v is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = v
