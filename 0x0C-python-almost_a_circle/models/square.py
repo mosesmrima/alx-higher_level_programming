@@ -28,8 +28,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """overloads the str method"""
-        return "[Square] ({}) {}/{} - {}"
-    .format(self.id, self.x, self.y, self.width)
+        w = self.width
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, w)
 
     def update(self, *args, **kwargs):
         """update attributes with new values"""
