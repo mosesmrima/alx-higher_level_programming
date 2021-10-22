@@ -11,7 +11,7 @@ class Base:
 
     def __init__(self, id=None):
         """init method"""
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -20,7 +20,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """convert a list of dictionaries to json"""
-        if list_dictionaries == None or list_dictionaries == []:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -29,7 +29,7 @@ class Base:
         """save a list of objects to a file"""
         fname = "{}.json".format(cls.__name__)
         with open(fname, encoding="utf-8", mode="w") as f:
-            if list_objs == None:
+            if list_objs is None:
                 f.write("[]")
             else:
                 list_dict = [o.to_dictionary() for o in list_objs]
@@ -38,7 +38,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """convert json string to a list of dictionaries"""
-        if json_string == None or json_string == "[]":
+        if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
 
