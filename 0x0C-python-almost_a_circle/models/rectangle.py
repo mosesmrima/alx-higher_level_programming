@@ -109,13 +109,13 @@ class Rectangle(Base):
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
-                elif arg == 1:
+                elif i == 1:
                     self.width = arg
-                elif arg == 2:
+                elif i == 2:
                     self.height = arg
-                elif arg == 3:
+                elif i == 3:
                     self.x = arg
-                elif arg == 4:
+                elif i == 4:
                     self.y = arg
                 i += 1
         elif kwargs and len(kwargs) != 0:
