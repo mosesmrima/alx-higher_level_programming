@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" get 10 latest comments """
+""" get 10 latest comments from a repo
+    scripts takes uname and repo name
+"""
 
 import sys
 import requests
