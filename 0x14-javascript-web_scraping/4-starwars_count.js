@@ -8,14 +8,8 @@ request(url, (err, res, body) => {
     console.log(err);
   } else {
     const movies = JSON.parse(body).results;
-    let count = 0;
-    movies.forEach(movie => {
-      movie.characters.forEach(character => {
-        if (character.endsWith('/18/')) {
-          count += 1;
-        }
-      });
-    });
-    console.log(count);
+    console.log(movies.reduce((count, movie) => {
+      return movie.characters.find(cha => cha.endsWith('/18/')) ? count += 1 : count;
+    }, 0));
   }
 });
