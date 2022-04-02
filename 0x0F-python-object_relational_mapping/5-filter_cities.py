@@ -21,4 +21,4 @@ if __name__ == "__main__":
     ORDER BY `c`.`id`")
 
     rows = cur.fetchall()
-    print(" ,".join([row[2] for row in rows if row[4] == state_n]))
+    print(", ".join([row[2] for row in rows if row[4] == state_n]))
