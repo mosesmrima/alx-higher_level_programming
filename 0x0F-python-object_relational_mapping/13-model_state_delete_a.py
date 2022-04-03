@@ -11,18 +11,13 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    uname = sys.argv[1]
-    passwd = sys.argv[2]
-    db = sys.argv[3]
-
-    engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost/{}".format(uname, passwd, db)
-        , pool_pre_ping=True)
-
-    session = sessionmaker(bind=engine)()
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
     for state in session.query(State):
         if "a" in state.name:
             session.delete(state)
-
     session.commit()
