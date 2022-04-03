@@ -17,13 +17,11 @@ if __name__ == "__main__":
 
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(uname, passwd, db)
-        , pool_pre_ping=True)
+    )
 
     session = sessionmaker(bind=engine)()
 
-    states = session.query(State)
-
-    for state in states:
+    for state in session.query(State):
         if "a" in state.name:
             session.delete(state)
 
