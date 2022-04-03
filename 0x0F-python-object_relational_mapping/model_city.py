@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-cities model
+this modules contains one class
+that represent the Cities model
 """
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
